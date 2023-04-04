@@ -24,18 +24,18 @@
         </address>
         <ul class="social-list">
           <li class="social-list__item">
-            <a href="" class="social-list__link">
-              Vk
+            <a href="#" class="social-list__link">
+              <img src="./images/icons/vk.svg" alt="Vk">
             </a>
           </li>
           <li class="social-list__item">
-            <a href="" class="social-list__link">
-              Instagram
+            <a href="#" class="social-list__link">
+              <img src="./images/icons/instagram.svg" alt="Instagram">
             </a>
           </li>
           <li class="social-list__item">
-            <a href="" class="social-list__link">
-              WhatsApp
+            <a href="#" class="social-list__link">
+              <img src="./images/icons/whatsapp.svg" alt="WhatsApp">
             </a>
           </li>
         </ul>
@@ -53,9 +53,10 @@
           Нитевой лифтинг кожи лица и шеи
         </h2>
         <p class="header__text">
-          Позвольте себе выглядеть моложе на 5 лет
+          Позвольте себе выглядеть моложе на <span>5 лет</span>
         </p>
         <div class="order">
+          <img class="header__arrow" src="./images/arrow-header.png" alt="arrow">
           <a class="order__link" href="#">
             Записаться
           </a>
@@ -67,42 +68,46 @@
   <main class="main">
     <section class="problems">
       <div class="problems__square"></div>
-      <div class="container">
-        <img class="problems__img" src="./images/problem.jpg" width="644" height="702"
-          alt="Фото лица красивой девушки с тёмными волосами.">
-        <span class="focus">
-          problem
-        </span>
-        <h2 class="section-title">
-          какие <span>проблемы</span>
-        </h2>
-        <h3 class="section-subtitle">
-          решает процедура
-        </h3>
-        <ul class="problems__list">
-          <li class="problems__item">
-            Мелкие и глубокие морщины
-          </li>
-          <li class="problems__item">
-            Носогубные складки
-          </li>
-          <li class="problems__item">
-            Опущение кончиков губ и бровей
-          </li>
-          <li class="problems__item">
-            Обвисание кожи и нечеткий овал
-          </li>
-          <li class="problems__item">
-            Наличие брылей и второго подбородка
-          </li>
-          <li class="problems__item">
-            Ассиметрия лица
-          </li>
-        </ul>
-        <div class="order">
-          <a class="order__link" href="#">
-            Записаться
-          </a>
+      <div class="container container-flex">
+        <div class="problems__img">
+          <img src="./images/problem.jpg" width="644" height="702" alt="Фото лица красивой девушки с тёмными волосами.">
+          <span class="focus focus-problem">
+            Problem
+          </span>
+        </div>
+        <div class="problems__info">
+          <h2 class="section-title problems-title">
+            какие <span>проблемы</span>
+          </h2>
+          <h3 class="section-subtitle">
+            решает процедура
+          </h3>
+          <ul class="problems__list">
+            <li class="problems__item wrinkles">
+              <span>Мелкие и глубокие морщины</span>
+            </li>
+            <li class="problems__item folds">
+              <span>Носогубные складки</span>
+            </li>
+            <li class="problems__item brows">
+              <span>Опущение кончиков губ и бровей</span>
+            </li>
+            <li class="problems__item oval">
+              <span>Обвисание кожи и нечеткий овал</span>
+            </li>
+            <li class="problems__item chin">
+              <span>Наличие брылей и второго подбородка</span>
+            </li>
+            <li class="problems__item asymmetry">
+              <span>Ассиметрия лица</span>
+            </li>
+          </ul>
+          <div class="order main-order">
+            <img class="order__arrow" src="./images/arrow.png" alt="arrow">
+            <a class="order__link order-probl" href="#">
+              Записаться
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -114,7 +119,7 @@
         <img class="info__img" src="./images/info_img1.jpg" width="580" height="747"
           alt="Фото лица красивой рыжеволосой девушки.">
         <span class="focus">
-          aptos
+          Aptos
         </span>
         <h2 class="section-title">
           нити <span>aptos.</span>

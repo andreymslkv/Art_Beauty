@@ -97,7 +97,10 @@ html {
 }
 
 body {
-  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-width: 1920px;
+  min-height: 100%;
   margin: 0;
   font-family: "Montserrat-Regular", sans-serif;
   font-size: 18px;
@@ -120,17 +123,33 @@ li {
   list-style: none;
 }
 
-.container {}
+.container {
+  width: 1400px;
+  margin: 0 auto;
+}
 
 /* Header */
 .header {
+  padding-bottom: 177px;
+  background-image: url(../images/header_img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
   background-color: #b38668;
   color: #ffffff;
+}
+
+.logo {
+  margin-right: 26px;
 }
 
 .header__info {}
 
 .title {
+  width: 173px;
+  margin: 0;
+  margin-right: 34px;
+  padding: 0;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -139,6 +158,8 @@ li {
 }
 
 .header__text {
+  width: 378px;
+  margin-bottom: 102px;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -147,18 +168,28 @@ li {
   color: #ffffff;
 }
 
-.header-top {}
+.header__text span {
+  font-weight: 600;
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
 
 .header__title {
+  width: 580px;
   font-family: "Kudryashev Headline", serif;
   font-weight: 400;
-  font-size: 80px;
+  font-size: 60px;
   line-height: 105px;
   letter-spacing: -0.03em;
   text-transform: uppercase;
 }
 
 .address {
+  width: 228px;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -166,11 +197,24 @@ li {
   line-height: 22px;
 }
 
-.social-list {}
+.social-list {
+  display: flex;
+  margin: 0;
+  margin-right: 34px;
+  margin-left: auto;
+  padding: 0;
+}
 
-.social-list__item {}
+.social-list__item:not(:last-child) {
+  margin-right: 38px;
+}
 
 .social-list__link {}
+
+.phone {
+  display: flex;
+  flex-direction: column;
+}
 
 .phone a {
   font-family: "Kudryashev Bold", serif;
@@ -192,9 +236,24 @@ li {
   text-transform: uppercase;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
 
-.order {}
+.order {
+  position: relative;
+  display: flex;
+  width: 300px;
+}
+
+.order::after {
+  position: absolute;
+  top: -23px;
+  left: -70px;
+  content: "";
+  width: 145px;
+  height: 120px;
+  background-image: url(../images/header-circle.svg);
+}
 
 .order__link {
   font-family: "Montserrat", sans-serif;
@@ -205,25 +264,58 @@ li {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #ffffff;
+  cursor: pointer;
+}
+
+.header__arrow {
+  margin-right: 12px;
 }
 
 /* Main */
 /* problems */
-.main {}
+.main {
+  flex-grow: 1;
+}
 
-.problems {}
+.problems {
+  position: relative;
+  padding-top: 93px;
+  padding-bottom: 161px;
+}
 
-.problems__square {}
+.container-flex {
+  display: flex;
+}
 
-.problems__img {}
+.problems__square {
+  position: absolute;
+  top: 480px;
+  left: 60px;
+  width: 711px;
+  height: 384px;
+  background-color: #f0e3da;
+  z-index: 1;
+}
+
+.problems__img {
+  position: relative;
+  z-index: 2;
+  margin-right: 72px;
+}
 
 .focus {
+  position: absolute;
   font-family: "Quente Script";
   font-style: normal;
   font-weight: 400;
   font-size: 80px;
   line-height: 96px;
   color: #1d1d1a;
+}
+
+.focus-problem {
+  top: 600px;
+  left: -56px;
 }
 
 .section-title {
@@ -238,10 +330,20 @@ li {
 }
 
 .section-title span {
+  margin-left: 164px;
   color: #b68c6e;
 }
 
+.problems-title {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 11px;
+  margin-left: -156px;
+}
+
 .section-subtitle {
+  margin-top: 0;
+  margin-bottom: 59px;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -252,16 +354,148 @@ li {
 }
 
 .problems__list {
+  margin: 0;
+  margin-bottom: 130px;
+  padding: 0;
   list-style-type: none;
+  column-count: 2;
+  column-gap: 116px;
 }
 
 .problems__item {
+  display: flex;
+  align-items: flex-start;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 30px;
   color: #1d1d1a;
+}
+
+.problems__item:not(:nth-child(3)):not(:last-child) {
+  margin-bottom: 50px;
+}
+
+.wrinkles span {
+  display: inline-block;
+  width: 212px;
+}
+
+.wrinkles::before {
+  display: inline-block;
+  content: "";
+  width: 51px;
+  height: 60px;
+  margin-right: 26px;
+  background-image: url(../images/icons/problem1.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+.folds::before {
+  display: inline-block;
+  content: "";
+  width: 51px;
+  height: 60px;
+  margin-right: 26px;
+  background-image: url(../images/icons/problem2.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+.folds span {
+  display: inline-block;
+  width: 212px;
+}
+
+.brows::before {
+  display: inline-block;
+  content: "";
+  width: 51px;
+  height: 60px;
+  margin-right: 26px;
+  background-image: url(../images/icons/problem3.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+.brows span {
+  display: inline-block;
+  width: 212px;
+}
+
+.oval::before {
+  display: inline-block;
+  content: "";
+  width: 51px;
+  height: 60px;
+  margin-right: 26px;
+  background-image: url(../images/icons/problem4.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+.oval span {
+  display: inline-block;
+  width: 212px;
+}
+
+.chin::before {
+  display: inline-block;
+  content: "";
+  width: 51px;
+  height: 60px;
+  margin-right: 26px;
+  background-image: url(../images/icons/problem5.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+.chin span {
+  display: inline-block;
+  width: 212px;
+}
+
+.asymmetry::before {
+  display: inline-block;
+  content: "";
+  width: 51px;
+  height: 60px;
+  margin-right: 26px;
+  background-image: url(../images/icons/problem6.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+.asymmetry span {
+  display: inline-block;
+  width: 212px;
+}
+
+.order-probl {
+  color: #1d1d1a;
+}
+
+.order-probl::after {
+  position: absolute;
+  top: -23px;
+  left: -70px;
+  content: "";
+  width: 145px;
+  height: 120px;
+  background-image: url(../images/circle.svg);
+}
+
+.order__arrow {
+  display: inline-block;
+  margin-right: 12px;
 }
 
 /* Info */
